@@ -2,7 +2,7 @@
 #/etc/motd
 
 class motd {
-$username = $::id
+$username = $::identity.user
   file { '/etc/motd':
   owner => 'root',
   group => 'root',
